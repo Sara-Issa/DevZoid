@@ -1,7 +1,7 @@
 import React from 'react'
 import Axios from "axios";
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 function ClientProfile() {
   const [client, setClient] = useState({});
@@ -19,6 +19,11 @@ function ClientProfile() {
     });
   }
   }, [id]);
+
+  // function deleteAccount() {
+  //   Axios.delete(`http://localhost:8000/api/user/${id}`)
+  // }
+
     return (
     <>
       <div>
@@ -29,6 +34,14 @@ function ClientProfile() {
           {/* phone icon */} <p>{client.phone}</p>
           {/* address icon */} <p>{client.address}</p>
       </div>
+      <div>
+      <Link to="/clientProfilePost">
+      <button className='nav-btn'>Update Profile</button>
+      </Link>
+      </div>
+      {/* <div>
+      <button className='nav-btn' onClick={() => deleteAccount()}>Delete Account</button>
+      </div> */}
     </>
   );
 }

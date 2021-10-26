@@ -18,6 +18,8 @@ exports.saveJob = async (req, res) => {
       name: req.body.name,
       description: req.body.description,
       price: req.body.price,
+      title: req.body.title,
+      userId: req.params.user._id,
     });
     res.status(200).send({ message: "created", job });
   } catch (e) {
@@ -50,3 +52,19 @@ exports.findJob = async (req, res) => {
     });
   }
 };
+
+// exports.Applied = async (req, res) => {
+//   try {
+//     await Job.create(req.body);
+//     res.status(201).json({ message: "job Apply success" });
+//   } catch (e) {
+//     res.status(404).json({ message: e.message });
+//   }
+// };
+
+// exports.getApplied = async (req, res) => {
+//   res.status(200).json({
+//     message: "job Deleted",
+//   });
+// };
+

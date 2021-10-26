@@ -54,11 +54,18 @@ exports.saveUser = async (req, res) => {
   }
 };
 
-exports.deleteUser = (req, res) => {
-  res.status(200).json({
-    message: "User Deleted",
-  });
-};
+// // exports.deleteUser = (req, res) => {
+// //   try {
+// //     await User.findByIdAndDelete(req.params.id);
+// //     res.status(200).json({
+// //       message: "deleted us",
+// //     });
+// //   } catch (e) {
+// //     res.status(400).json({
+// //       message: e,
+// //     });
+// //   }
+// };
 
 exports.findUser = async (req, res) => {
   try {
@@ -82,6 +89,19 @@ exports.findUser = async (req, res) => {
     res.status(200).send({ message: "Logged in", user, token });
   } catch (e) {
     res.status(400).json({ message: e.message });
+  }
+};
+
+exports.find = async (req, res) => {
+  const userId = req.query.userId;
+  const username = req.query.username;
+  try {
+    const user = userId
+      ? await User.findById(userId)
+      : await User.findOne({ username: username });
+    res.status(200).json({message: "messages found", user});
+  } catch (err) {
+    res.status(500).json(err);
   }
 };
 

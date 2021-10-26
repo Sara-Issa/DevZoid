@@ -1,7 +1,9 @@
 import React from 'react'
 import "./message.css";
+import { format } from "timeago.js";
 
-export default function Message({own}) {
+
+export default function Message({message, own}) {
     return (
         <div className={own ? "message own" : "message"}>
         <div className="messageTop">
@@ -10,9 +12,9 @@ export default function Message({own}) {
             src="./messages.svg"
             alt="messages"
           />
-          <p className="messageText">Hello, my name is Dori</p>
+          <p className="messageText">{message.text}</p>
         </div>
-        <div className="messageBottom">16 min ago</div>
+        <div className="messageBottom">{format(message.createdAt)}</div>
       </div>
     )
 }

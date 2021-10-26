@@ -3,7 +3,7 @@ import Axios from "axios";
 import Review from "./Dashboard/Reviews";
 import ReviewForm from './Dashboard/ReviewForm';
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import {
   AiOutlineInstagram,
   AiOutlineLinkedin,
@@ -15,10 +15,15 @@ import {
 const token = JSON.parse(localStorage.getItem("token"));
 
 
-function Freelancer() {
+function Freelancer({currentChat}) {
   const [reviews, setReviews] = useState([]);
   const [freelancer, setFreelancer] = useState({});
-  const { id } = useParams();
+  const { id, user } = useParams();
+
+// test
+const [newMessage, setNewMessage] = useState("");
+const [messages, setMessages] = useState([]);
+// test
 
   useEffect(() => {
     if (id) {
@@ -36,11 +41,23 @@ function Freelancer() {
     Axios.get(`http://localhost:8000/api/review/${id}?token=${token}`)
     .then((res) => setReviews(res.data.review));
   }, );
-  
+  // test code
+  const handleClick = async (e) => {
+    try {
+      const res = await Axios.post("http://localhost:8000/api/messages");
+      setMessages([...messages, res.data]);
+      setNewMessage("");
+    } catch (err) {
+      console.log(err);
+    }
+  };
   
   return (
     
      <div>
+       <Link to="/messenger">
+       <button onClick={() => handleClick()}>Message me!</button>
+       </Link>
       <div>
         <img></img>
       </div>

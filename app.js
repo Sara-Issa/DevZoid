@@ -22,9 +22,16 @@ const clientRouter = require("./Router/clientRouter");
 
 
 // test
+const conversationRouter = require("./Router/conversationRouter");
+const messageRouter = require("./Router/messageRouter");
+const friendRouter = require("./Router/friendRouter");
+const AppliedRouter = require("./Router/AppliedRouter");
+app.use("/api/conversations", conversationRouter);
+app.use("/api/messages", messageRouter);
+app.use("/api/friend", friendRouter);
+app.use("/api/applied", AppliedRouter);
 
-
-
+// test
 
 
 app.use("/api/user", userRouter);

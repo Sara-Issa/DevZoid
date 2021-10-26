@@ -13,11 +13,19 @@ function Nav() {
           <Link to="/profile">
           <li>Profile</li>
           </Link>
+          <Link to="/jobApplied">
           <li>Jobs</li>
+          </Link>
+          <Link to="/payment">
           <li>Payments</li>
+          </Link>
+          <Link to="/account">
           <li>Account</li>
+          </Link>
+          <Link to="/sitting">
           <li>Sitting</li>
-        </ul>
+          </Link>
+          </ul>
       </div>
     </div>
   );

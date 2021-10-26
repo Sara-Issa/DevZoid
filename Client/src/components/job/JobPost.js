@@ -4,16 +4,23 @@ import Axios from "axios";
 import { toast } from "react-toastify";
 import { useHistory, Link } from "react-router-dom";
 
+const user = JSON.parse(localStorage.getItem("user"));
+
 function JobPost() {
   const history = useHistory();
+  
+  // ._id is not being read!!!!
+  const userId =(user._id);
   const [job, setJob] = useState({
     name: "",
     description: "",
     price: "",
+    title: "",
+    userId,
   });
 
   function signUp() {
-    Axios.post("http://localhost:8000/api/job/", job)
+    Axios.post("http://localhost:8000/api/job/", job )
       .then(() => {
         toast.success("Job Posted");
         history.push("/job");
@@ -32,6 +39,12 @@ function JobPost() {
           className="input"
           placeholder="Name"
           onChange={(e) => setJob({ ...job, name: e.target.value })}
+        ></input>
+         <input
+          type="text"
+          className="input"
+          placeholder="Job title"
+          onChange={(e) => setJob({ ...job, title: e.target.value })}
         ></input>
         <input
           type="text"
