@@ -5,11 +5,11 @@ import Axios from "axios";
 import { useParams } from "react-router-dom"
 
 
-function ReviewForm(freelancerId, userId) {
+function ReviewForm() {
   const [title, setTitle] = useState("");
   const [rating, setRating] = useState(1);
   const [review, setReview] = useState("");
-  const { _id } = useParams();
+  const { id } = useParams();
 
   function saveReview() {
     console.log("review");
@@ -17,9 +17,11 @@ function ReviewForm(freelancerId, userId) {
       title,
       rating,
       review,
-      user: userId,
-      freelancer: freelancerId,
-    }).then((res) => console.log(res));
+      user: JSON.parse(localStorage.getItem("user"))._id,
+      freelancer: id,
+    }).then((res) => console.log(res)).catch((e) => {
+      console.log(e.response.data.message);
+    });
   }
 
   return (

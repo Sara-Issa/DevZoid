@@ -28,7 +28,7 @@ function Profile() {
   return (
     <div>
       <div>
-        <img></img>
+      <img src={`http://localhost:8000/${profile.image}`}  alt="profile-image"/>
       </div>
       <div>
         <h2>{profile.name}</h2>
@@ -49,7 +49,7 @@ function Profile() {
           <h3>Contact Information</h3>
           {/* phone icon */} <p>{profile.phone}</p>
           {/* address icon */} <p>{profile.address}</p>
-          {/* email icon */} <p></p>
+          {/* email icon */} <p>{JSON.parse(localStorage.getItem("user")).email}</p>
           {/* website */} <p>{profile.website}</p>
         </div>
         <div>

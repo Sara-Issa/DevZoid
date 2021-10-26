@@ -46,16 +46,17 @@ function App() {
           <PrivateRoute exact path="/dashboard" component={Dashboard} />
           <PrivateRoute exact path="/account" component={Account} />
           <PrivateRoute exact path="/profile" component={Profile} />
-          <PrivateRoute exact path="/clientProfile/:id" exact component={ClientProfile} />
+          <PrivateRoute exact path="/clientProfile" exact component={ClientProfile} />
           <PrivateRoute exact path="/clientProfilePost" component={ClientProfilePost} />
           <PrivateRoute exact path="/jobPost" component={JobPost} />
           <Route path="/about" exact component={About} />
           <Route path="/terms" exact component={Terms} />
           <Route path="/privacy" exact component={Privacy} />
         </Switch>
+        <Footer />
       </Router>
 
-      <Footer />
+      
       <ToastContainer
         position="top-right"
         autoClose={5000}

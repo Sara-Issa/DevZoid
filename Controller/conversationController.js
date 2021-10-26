@@ -6,8 +6,15 @@ exports.newConversation = async (req, res) => {
   });
 
   try {
-    const savedConversation = await newConversation.save();
-    res.status(200).json(savedConversation);
+    //1 findOne from the db where senderId and recieverId exist,
+    //2 if it doesn't exist i wa
+    const exsists = await Conversation.findOne({members:  {"$in" : 
+    [ req.body.senderId, req.body.receiverId]}}) 
+    console.log(exsists);   
+    if (exsists === null) {
+      const savedConversation = await newConversation.save();
+      res.status(200).json(savedConversation);
+    }
   } catch (err) {
     res.status(500).json(err);
   }

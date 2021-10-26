@@ -29,7 +29,7 @@ function footer() {
           <div className="footer-col">
             <h4>User Guidelines</h4>
             <ul className="ul-main">
-              <BrowserRouter>
+              {/* <BrowserRouter> */}
               <Link to="/privacy">
               <li className="li-main"><a href="">Privacy</a></li>
               </Link>
@@ -41,7 +41,7 @@ function footer() {
               <Link to="/about">
               <li className="li-main"><a href="">About</a></li>
               </Link>
-              </BrowserRouter>
+              {/* </BrowserRouter> */}
             </ul>
           </div>
           <div className="footer-col">

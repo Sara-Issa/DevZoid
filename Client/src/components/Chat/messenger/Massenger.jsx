@@ -3,7 +3,6 @@ import "./messenger.css";
 import Axios from "axios";
 import Conversation from "../conversations/Conversation";
 import Message from "../message/Message";
-import ChatOnline from "../chatOnline/ChatOnline";
 import { useState, useRef, useEffect} from 'react';
 import {io} from "socket.io-client";
 
@@ -17,7 +16,6 @@ const [currentChat, setCurrentChat] = useState(null);
 const [messages, setMessages] = useState([]);
 const [newMessage, setNewMessage] = useState("");
 const [arrivalMessage, setArrivalMessage] = useState(null);
-const [onlineUsers, setOnlineUsers] = useState([]);
 const socket = useRef();
 const scrollRef = useRef();
 
@@ -44,9 +42,6 @@ useEffect(() => {
 
 useEffect(() => {
   socket.current.emit("addUser", user._id);
-  socket.current.on("getUsers", users=>{
-    setOnlineUsers(users);
-  });
 },[user]);
 
 
@@ -155,14 +150,6 @@ useEffect(() => {
                 )}
           </div>
           </div>
-         <div className="chatOnline">
-          <div className="chatOnlineWrapper">
-            <ChatOnline onlineUsers={onlineUsers} 
-             currentId={user._id} 
-             setCurrentChat={setCurrentChat}
-             />
-          </div>
-         </div>
         </div>
         </>
     )

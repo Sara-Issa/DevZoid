@@ -21,7 +21,7 @@ function Login() {
         if (JSON.parse(localStorage.getItem("user")).role === "freelancer") {
           history.push("/profile");
         } else {
-          history.push("/");
+          history.push("/clientProfile");
         }
       })
       .catch((e) => toast.error(e.response.data.message));

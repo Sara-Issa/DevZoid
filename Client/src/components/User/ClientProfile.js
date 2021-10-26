@@ -7,10 +7,13 @@ function ClientProfile() {
   const [client, setClient] = useState({});
   const { id } = useParams();
 
+
   useEffect(() => {
+    const user = JSON.parse(localStorage.getItem("user"));
+    console.log(user);
     console.log(id);
-    if (id) {
-    Axios.get(`http://localhost:8000/api/client/${id}`).then((res) => {
+    if (user) {
+    Axios.get(`http://localhost:8000/api/client/${user._id}`).then((res) => {
       console.log(res.data.client);
       localStorage.setItem("client", JSON.stringify(res.data.client));  
       setClient(res.data.client);
@@ -18,7 +21,7 @@ function ClientProfile() {
      
     });
   }
-  }, [id]);
+  });
 
   // function deleteAccount() {
   //   Axios.delete(`http://localhost:8000/api/user/${id}`)

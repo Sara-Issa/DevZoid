@@ -20,11 +20,6 @@ function Freelancer({currentChat}) {
   const [freelancer, setFreelancer] = useState({});
   const { id, user } = useParams();
 
-// test
-const [newMessage, setNewMessage] = useState("");
-const [messages, setMessages] = useState([]);
-// test
-
   useEffect(() => {
     if (id) {
     Axios.get(`http://localhost:8000/api/freelancer/${id}`).then((res) => {
@@ -42,11 +37,12 @@ const [messages, setMessages] = useState([]);
     .then((res) => setReviews(res.data.review));
   }, );
   // test code
-  const handleClick = async (e) => {
+  const handleClick = async () => {
     try {
-      const res = await Axios.post("http://localhost:8000/api/messages");
-      setMessages([...messages, res.data]);
-      setNewMessage("");
+        await Axios.post("http://localhost:8000/api/conversations", {
+        senderId: JSON.parse(localStorage.getItem("user"))._id,
+        receiverId: id,
+      })
     } catch (err) {
       console.log(err);
     }
@@ -100,7 +96,7 @@ const [messages, setMessages] = useState([]);
             <Review review={review} />
             ))} */}
             </div>
-      <div><ReviewForm freelancerId={id} /></div>
+      <div><ReviewForm /></div>
       
     </div>
   );
