@@ -1,7 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import Axios from "axios";
-import { useParams, useHistory} from "react-router-dom";
+import { useParams, useHistory, Link} from "react-router-dom";
 import { toast } from "react-toastify";
 
 function Job() {
@@ -20,47 +20,22 @@ function Job() {
     }
   }, [id]);
 
-  // const job = console.log(res.data.job);
 
-
-  // function addToJobList(job) {
-  //   const jobs = [job];
-  //   if (
-  //     localStorage.getItem("token") === null
-  //   ) { 
-  //     toast.message("you have to login first");
-  //     history.push("/login")
-  //   } else {
-  //     Axios.post(`http://localhost:8000/api/job/applied`)
-  //       };
-  //     toast.success("you applied to the job successfully");
-  //     history.push("/jobApplied");
-  //   };
-
-  function addToJobList() {
-    const Apply= async () => {
-      try { await Axios.post(`http://localhost:8000/api/job/applied`, job)
-        
-      } catch (error) {
-        
-      }
-    }
-    };
 
   return (
-    <div>
-      <div>
-        {/* add an image */}
-        <img />
+    <div className="job">
+      <div className="job-box">
+        <h3  className="job-title">Name</h3>
+        <Link to={`/client/${job.userId}`}>
+          <h3  className="job-name">{job.name} </h3>
+        </Link>
+        <h3  className="job-title">Job Title</h3>
+        <h4  className="job-info">{job.title}</h4>
+        <h3  className="job-title">Job description</h3>
+        <p  className="job-info">{job.description}</p>
+        <h3  className="job-title">Price</h3>
+        <h5  className="job-info">${job.price}</h5>
       </div>
-      <div>
-        <h3>{job.name}</h3>
-        <p>{job.description}</p>
-        <h5>${job.price}</h5>
-      </div>
-      <di>
-        <button onClick={() => addToJobList(job)}>Apply Now</button>
-      </di>
     </div>
   );
 }

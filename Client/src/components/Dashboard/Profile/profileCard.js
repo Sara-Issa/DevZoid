@@ -1,20 +1,21 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "./profile.css"
 
 function profileCard({ data }) {
   return (
-    <div>
-      <div>
-        <img></img>   
+    <div className="profileList-container">
+      <div className="profileList-box">
+        <img src={`http://localhost:8000/${data.image}`} alt="image" className="profileList-img"></img>   
       </div>
-      <div>
-        <div>
-          <h3>
-            <Link to={`/freelancer/${data._id}`}>
+      <div className="profileList-box">
+        <div  className="profileList-title">
+          <h3 className="profileList-title">
+            <Link to={`/freelancer/${data._id}`} className="profileList-title">
               {data.name}
               </Link>
           </h3>
-          <span>{data.title}</span>
+          <span className="profileList-info">{data.title}</span>
         </div>
       </div>
     </div>

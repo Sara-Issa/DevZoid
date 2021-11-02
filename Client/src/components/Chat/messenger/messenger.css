@@ -1,6 +1,7 @@
 .messenger {
     height: calc(100vh - 70px);
     display: flex;
+    padding: 100px 0px;
   }
   
   .chatMenu {
@@ -11,7 +12,7 @@
     width: 90%;
     padding: 10px 0;
     border: none;
-    border-bottom: 1px solid gray;
+    border-bottom: 1px solid #e4e83b;
   }
   
   .chatBox {
@@ -74,19 +75,10 @@
   }
   
   @media screen and (max-width: 768px) {
-    .chatMenu {
-      flex: 1;
-    }
-  
-    .chatMenuInput {
-      display: none;
-    }
-  
-    .chatBox{
-      flex: 10;
-    }
-  
-    .chatOnline{
-      flex: 1px;
+    .messenger {
+      display: block;
+      width: 80%;
+      margin: auto;
+      padding: 100px 0px;
     }
   }

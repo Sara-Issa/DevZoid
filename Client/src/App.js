@@ -18,7 +18,7 @@ import Freelancer from "./components/Freelancer";
 import ClientProfilePost from"./components/User/Client";
 import ClientProfile from"./components/User/ClientProfile";
 import ProfileList from "./components/Dashboard/Profile/ProfileList";
-
+import Menu from "./components/menu"
 
 import Messenger from "./components/Chat/messenger/Massenger";
 
@@ -34,8 +34,9 @@ function App() {
       <Router>
         <Nav />
         <Switch>
-          <Route exact path="/" exact component={Home} />
+          <Route exact path="/" component={Home} />
           <Route path="/register" exact component={Register} />
+          <Route path="/menu" exact component={Menu} />
           <Route path="/login" exact component={Login} />
           <Route path="/jobList" exact component={JobList} />
           <Route path="/freelancer/:id" exact component={Freelancer} />

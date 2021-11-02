@@ -1,26 +1,26 @@
 import React from "react";
+import "./home.css";
 
 function Offer() {
   return (
-    <div className="space">
-      <div className="container">
-        <div>
-          <img src="./hire.svg" alt="hire" className="nav-img-offer" />
-          <p>you are looking for a talent, find and hire freelancers easily</p>
+    <div className="nav5">
+      <div className="nav5-container">
+        <div className="nav5-box">
+          <img src="./hire.svg" alt="hire" className="nav5-img" />
+          <p className="nav5-info">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
         </div>
-        <div>
-          <img src="./find.svg" alt="find" className="nav-img-offer" />
-          <p>you want to work, find more clients that are ready to hire you</p>
+        <div className="nav5-box">
+          <img src="./find.svg" alt="find" className="nav5-img" />
+          <p className="nav5-info">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
         </div>
-        <div>
+        <div className="nav5-box">
           <img
             src="./work from home.svg"
             alt="work from home"
-            className="nav-img-offer"
+            className="nav5-img"
           />
-          <p>
-            do not like to go to an offices, congrats now you are able to work
-            from anywhere
+          <p className="nav5-info">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
           </p>
         </div>
       </div>

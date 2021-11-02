@@ -5,10 +5,10 @@ import Conversation from "../conversations/Conversation";
 import Message from "../message/Message";
 import { useState, useRef, useEffect} from 'react';
 import {io} from "socket.io-client";
+import {useParams} from "react-router-dom";
 
 
-
-const user = JSON.parse(localStorage.getItem('user'));
+const user = JSON.parse(localStorage.getItem("user"));
 
 export default function Messenger() {
 const [conversations, setConversations] = useState([]);
@@ -18,6 +18,7 @@ const [newMessage, setNewMessage] = useState("");
 const [arrivalMessage, setArrivalMessage] = useState(null);
 const socket = useRef();
 const scrollRef = useRef();
+const { id } = useParams();
 
 useEffect(() => {
   socket.current = io("ws://localhost:8900");
@@ -40,25 +41,45 @@ useEffect(() => {
 
 
 
+// useEffect(() => {
+//   socket.current.emit("addUser", user._id);
+//   socket.current.on("getUsers", (users) => {
+//     setOnlineUsers(
+//       user.followings.filter((f) => users.some((u) => u.userId ===f ))
+//     );
+//   });
+// },[user]);
+
 useEffect(() => {
-  socket.current.emit("addUser", user._id);
-},[user]);
-
-
+  const get= async () => {
+  if (user) {
+    try {
+      socket.current.emit("addUser", user._id);
+     
+  } catch (err) {
+    console.log(err);
+  }
+}
+  };
+  get();
+}, [user]);
 
 useEffect(() => {
   const getConversations = async () => {
+
   if (user) {
     try {
-    const res = await Axios.get(`http://localhost:8000/api/conversations/${user._id}`);
-      setConversations(res.data)
+    const res = await Axios.get(`http://localhost:8000/api/conversations/${user._id}`, { 
+      userId: JSON.parse(localStorage.getItem("user"))._id,
+    });
+     setConversations(res.data);
   } catch (err) {
     console.log(err);
   }
 }
   };
   getConversations();
-}, [user._id]);
+}, [user]);
 
 
 useEffect(() => {

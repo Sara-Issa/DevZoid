@@ -1,29 +1,20 @@
 import React from "react";
 import {Link} from "react-router-dom"
+import "./dashboard.css"
 
 function Nav() {
   return (
-    <div>
-      <div>
-        <image src=""></image>
-        <h2></h2>
-      </div>
-      <div>
-        <ul>
+    <div className="dashboard">
+      <div className="dashboard-box">
+        <ul className="dashboard-container">
           <Link to="/profile">
-          <li>Profile</li>
+          <li className="dashboard-li">Profile</li>
           </Link>
-          <Link to="/jobApplied">
-          <li>Jobs</li>
-          </Link>
-          <Link to="/payment">
-          <li>Payments</li>
+          <Link to="/jobList">
+          <li className="dashboard-li">Jobs</li>
           </Link>
           <Link to="/account">
-          <li>Account</li>
-          </Link>
-          <Link to="/sitting">
-          <li>Sitting</li>
+          <li className="dashboard-li">Account</li>
           </Link>
           </ul>
       </div>

@@ -27,7 +27,7 @@ exports.deleteReview = (req, res) => {
 
 exports.findReview = async (req, res) => {
   try {
-    const reviews = await Review.find({ freelancer: req.params.id }).populate("user");
+    const reviews = await Review.find({ profile: req.params.id }).populate("user");
     res.status(200).json({ reviews });
   } catch (e) {
     res.status(400).json({

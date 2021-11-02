@@ -1,6 +1,8 @@
 import React from "react";
 import Axios from "axios";
-import Reviews from "../Reviews"
+import "../dashboard.css"
+import Nav from "../Nav";
+import Reviews from "../reviews"
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import {
@@ -26,48 +28,57 @@ function Profile() {
     }
   }, [user]);
   return (
-    <div>
-      <div>
-      <img src={`http://localhost:8000/${profile.image}`}  alt="profile-image"/>
+    <>
+    <div className="nav-box">
+        <Nav />
       </div>
-      <div>
-        <h2>{profile.name}</h2>
-        <h4>{profile.title}</h4>
+    <div className="profile1">
+      <div className="profile1-container">
+      <div className="profile1-box">
+      <img src={`http://localhost:8000/${profile.image}`}  alt="profile-image" className="profile1-img"/>
       </div>
-      <div>
-        <h3>About</h3>
-        <p>{profile.about}</p>
-        <h3>Education</h3>
-        <p>{profile.education}</p>
-        <h3>Skills</h3>
-        <p>{profile.skills}</p>
-        <h3>Experience</h3>
-        <p>{profile.experience}</p>
+      <div className="profile1-box">
+        <h2 className="profile1-name">{profile.name}</h2>
+        <h4 className="profile1-name">{profile.title}</h4>
       </div>
-      <div>
+      </div>
+      <div className="profile1-container">
+      <div className="profile1-box">
+        <h3 className="profile1-title">About</h3>
+        <p className="profile1-info">{profile.about}</p>
+        <h3 className="profile1-title">Education</h3>
+        <p className="profile1-info">{profile.education}</p>
+        <h3 className="profile1-title">Skills</h3>
+        <p className="profile1-info">{profile.skills}</p>
+        <h3 className="profile1-title">Experience</h3>
+        <p className="profile1-info">{profile.experience}</p>
+      </div>
+      <div className="profile1-box">
         <div>
-          <h3>Contact Information</h3>
-          {/* phone icon */} <p>{profile.phone}</p>
-          {/* address icon */} <p>{profile.address}</p>
-          {/* email icon */} <p>{JSON.parse(localStorage.getItem("user")).email}</p>
-          {/* website */} <p>{profile.website}</p>
+          <h3 className="profile1-title">Contact Information</h3>
+          {/* phone icon */} <p className="profile1-info">{profile.phone}</p>
+          {/* address icon */} <p className="profile1-info">{profile.address}</p>
+          {/* email icon */} <p className="profile1-info">{JSON.parse(localStorage.getItem("user")).email}</p>
+          {/* website */} <p className="profile1-info">{profile.website}</p>
         </div>
         <div>
-          <h3>Social Media</h3>
-          <AiOutlineTwitter /> <p>{profile.twitter}</p>
-          < AiOutlineFacebook/> <p>{profile.facebook}</p>
-          <AiOutlineGithub /> <p>{profile.github}</p>
-          < AiOutlineLinkedin /><p>{profile.linked}</p>
-          <AiOutlineInstagram /> <p>{profile.instagram}</p>
+          <h3 className="profile1-title">Social Media</h3>
+           <p className="profile1-info"><AiOutlineTwitter />{profile.twitter}</p>
+           <p className="profile1-info">< AiOutlineFacebook/>{profile.facebook}</p>
+           <p className="profile1-info"><AiOutlineGithub />{profile.github}</p>
+          <p className="profile1-info">< AiOutlineLinkedin />{profile.linked}</p>
+          <p className="profile1-info"><AiOutlineInstagram /> {profile.instagram}</p>
         </div>
       </div>
-      <div>
-        <h3> Review</h3>
       </div>
-      <div>{/* import the review form to here */}</div>
-      <div>{/* import the review display here */}</div>
-      {/* <Reviews /> */}
+      <div className="profile1-container">
+      <div className="profile1-box">
+        <h3 className="profile1-title"> Review</h3>
+        {/* <Reviews /> */}
+      </div>
     </div>
+    </div>
+    </>
   );
 }
 

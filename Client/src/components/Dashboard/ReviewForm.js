@@ -18,7 +18,7 @@ function ReviewForm() {
       rating,
       review,
       user: JSON.parse(localStorage.getItem("user"))._id,
-      freelancer: id,
+      profile: id,
     }).then((res) => console.log(res)).catch((e) => {
       console.log(e.response.data.message);
     });
@@ -26,8 +26,8 @@ function ReviewForm() {
 
   return (
     // this is the review form
-    <div>
-      <h3>Add a new review</h3>
+    <div className="review-title">
+      <h3  className="review-title">Add a new review</h3>
       <div className="flex add-review">
         <input
           type="text"
@@ -35,7 +35,7 @@ function ReviewForm() {
           className="input"
           onChange={(e) => setTitle(e.target.value)}
         />
-        <div>
+        <div  className="review-title">
           <MdStar
             className={rating >= 1 ? "review-star star" : "review-star"}
             onClick={() => setRating(1)}
@@ -59,12 +59,14 @@ function ReviewForm() {
         </div>
         <textarea
           placeholder="Review"
-          rows="4"
+          rows="4" className="review-title"
           onChange={(e) => setReview(e.target.value)}
         />
+        <div  className="review-title">
         <button className="btn-review hover" onClick={() => saveReview()}>
           Submit Review
         </button>
+        </div>
       </div>
     </div>
   );

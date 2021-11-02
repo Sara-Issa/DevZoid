@@ -24,14 +24,14 @@ const storage = multer.diskStorage({
 
 // add
 router.route("/")
-.post(  verifyToken, upload.single("image"), clientController.saveClient)
+.post(upload.single("image"), clientController.saveClient)
 
 // get
 
 router.route("/:id")
 .get(clientController.findClient)
-.put(verifyToken, upload.single("image"), clientController.editClient)
-.delete(verifyToken, clientController.deleteClient)
+.put(upload.single("image"), clientController.editClient)
+.delete(clientController.deleteClient)
 
 
 module.exports = router;

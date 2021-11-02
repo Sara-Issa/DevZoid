@@ -7,7 +7,8 @@
   }
   
   .conversation:hover {
-    background-color: rgb(245, 243, 243);
+    background-color: #e4e83b;
+    border-radius: 20px;
   }
   
   .conversationImg {
@@ -20,11 +21,19 @@
   
   .conversationName {
     font-weight: 500;
+    font-size: 20px;
+    color: #f5f5f5;
+    background-color: transparent;
+  }
+
+  .conversationName:hover {
+    font-weight: 500;
+    font-size: 20px;
+    color: #333f48;
+    background-color: #e4e83b ;
   }
   
-  @media screen and (max-width: 768px) {
-    .conversationName {
-      display: none;
-    }
+
+  @media only screen and (max-width: 700px) {
+    
   }
-  

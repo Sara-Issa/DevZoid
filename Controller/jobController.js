@@ -19,7 +19,7 @@ exports.saveJob = async (req, res) => {
       description: req.body.description,
       price: req.body.price,
       title: req.body.title,
-      userId: req.params.user._id,
+      userId: req.body.userId,
     });
     res.status(200).send({ message: "created", job });
   } catch (e) {

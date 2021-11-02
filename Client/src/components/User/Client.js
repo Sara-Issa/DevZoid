@@ -3,8 +3,11 @@ import { useState, useEffect } from "react";
 import Axios from "axios";
 import { toast } from "react-toastify";
 import { useHistory } from "react-router-dom";
+import "./client.css"
 
 const token = JSON.parse(localStorage.getItem("token"));
+const user = (JSON.parse(localStorage.getItem("user")));
+
 
 function Client() {
   const history = useHistory();
@@ -14,21 +17,16 @@ function Client() {
     phone: "",
     address: "",
   });
-  const [user, setUser] = useState();
-  const [userId, setUserId] = useState();
   
 
   useEffect(() => {
-    setUser(JSON.parse(localStorage.getItem("user")));
-    console.log(user);
     if (user) {
       Axios.get(`http://localhost:8000/api/client/${user._id}`).then(
         (res) => setClient(res.data.client),
-        (res) => setUserId(res.data.client._id)
       );
     }
      
-  }, []);
+  }, [user]);
 
   function save(e) {
     e.preventDefault();
@@ -43,15 +41,16 @@ function Client() {
     )
       .then((response) => {
         toast.success("client updated");
-        history.push("/client");
+        history.push("/clientProfile");
       })
       .catch((e) => toast.error(e.message));
   }
   return (
-    <div>
-      <div>
+    <div className="clientProfile">
+      <div  className="clientProfile-box">
+        <div className="color">
         <input
-          className=""
+          className="clientProfile-upload"
           type="file"
           placeholder="Image"
           name="image"
@@ -60,41 +59,45 @@ function Client() {
             console.log(e.target.files[0]);
           }}
         />
-        
+        </div>
         <div>
+        <h5 className="clientProfile-title">Name</h5>
+        <div className="color">
           <input
-            className="input"
+            className="clientProfile-input"
             type="text"
             placeholder="name"
             value={client.name}
             onChange={(e) =>
               setClient({ ...client, name: e.target.value })
             }
-          />
-        <h5>Phone</h5>
+          /></div>
+        <h5 className="clientProfile-title">Phone</h5>
+        <div className="color">
         <input
-          className="input"
+          className="clientProfile-input"
           type="text"
           placeholder="phone"
           value={client.phone}
           onChange={(e) =>
             setClient({ ...client, phone: e.target.value })
           }
-        />
-        <h5>Address</h5>
+        /></div>
+        <h5 className="clientProfile-title">Address</h5>
+        <div className="color">
         <input
-          className="input"
+          className="clientProfile-input"
           type="text"
           placeholder="address"
           value={client.address}
           onChange={(e) =>
             setClient({ ...client, address: e.target.value })
           }
-        />
+        /></div>
         </div>
       </div>
-      <div>
-        <button className="btn-review hover" onClick={(e) => save(e)}>
+      <div className="clientProfile-box">
+        <button  className="clientProfile-btn" onClick={(e) => save(e)}>
           Profile Save
         </button>
       </div>

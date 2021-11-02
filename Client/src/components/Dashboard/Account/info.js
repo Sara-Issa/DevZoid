@@ -1,16 +1,11 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import Axios from "axios";
+import "../Profile/profile.css"
 import Nav from "../Nav";
 import { toast } from "react-toastify";
 import { useHistory } from "react-router-dom";
-import {
-  AiOutlineInstagram,
-  AiOutlineLinkedin,
-  AiOutlineTwitter,
-  AiOutlineGithub,
-  AiOutlineFacebook,
-} from "react-icons/ai";
+
 
 const token = JSON.parse(localStorage.getItem("token"));
 
@@ -64,15 +59,13 @@ function Info() {
       .catch((e) => toast.error(e.message));
   }
   return (
-    <div>
-      <div>
+    <div className="info">
+      <div className="info-box">
         <Nav />
       </div>
-      <div>
-        {/* profile image set default image if they don't upload one */}
-        {/* this is where they upload the image */}
+      <div className="info-box">
         <input
-          className=""
+          className="info-upload"
           type="file"
           placeholder="Image"
           name="image"
@@ -84,170 +77,188 @@ function Info() {
         />
         <div>
           {/* name */}
+          <h5 className="info-info">Name</h5>
+          
+          <div className="color">
           <input
-            className="input"
+            className="info-input"
             type="text"
             placeholder="name"
             value={freelancer.name}
             onChange={(e) =>
               setFreelancer({ ...freelancer, name: e.target.value })
             }
-          ></input>
+          /></div>
           {/* what they do */}
+          <h5 className="info-info">title</h5>
+          <div className="color">
           <input
-            className="input"
+            className="info-input"
             type="text"
             placeholder="title"
             value={freelancer.title}
             onChange={(e) =>
               setFreelancer({ ...freelancer, title: e.target.value })
             }
-          ></input>
+         /></div>
         </div>
       </div>
       <div>
         {/* About */}
-        <h5>About</h5>
+        <h5 className="info-info">About</h5>
+        <div className="color">
         <input
-          className="input"
+          className="info-input"
           type="text"
           placeholder="about"
           value={freelancer.about}
           onChange={(e) =>
             setFreelancer({ ...freelancer, about: e.target.value })
           }
-        ></input>
+        /></div>
         {/* education */}
-        <h5>Education</h5>
+        <h5 className="info-info">Education</h5>
+        <div className="color">
         <input
-          className="input"
+          className="info-input"
           type="text"
           placeholder="education"
           value={freelancer.education}
           onChange={(e) =>
             setFreelancer({ ...freelancer, education: e.target.value })
           }
-        ></input>
+        /></div>
         {/* Skills */}
-        <h5>Skills</h5>
+        <h5 className="info-info">Skills</h5>
+        <div className="color">
         <input
-          className="input"
+          className="info-input"
           type="text"
           placeholder="skills"
           value={freelancer.skills}
           onChange={(e) =>
             setFreelancer({ ...freelancer, skills: e.target.value })
           }
-        ></input>
+        /></div>
         {/* Experience */}
-        <h5>Experience</h5>
+        <h5 className="info-info">Experience</h5>
+        <div className="color">
         <input
-          className="input"
+          className="info-input"
           type="text"
           placeholder="experience"
           value={freelancer.experience}
           onChange={(e) =>
             setFreelancer({ ...freelancer, experience: e.target.value })
           }
-        ></input>
+        /></div>
       </div>
       <div>
         {/* contact information */}
-        <h3>Contact Information</h3>
-        <h5>Phone</h5>
+        <h3 className="info-info2">Contact Information</h3>
+        <h5 className="info-info">Phone</h5>
+        <div className="color">
         <input
-          className="input"
+          className="info-input"
           type="text"
           placeholder="phone"
           value={freelancer.phone}
           onChange={(e) =>
             setFreelancer({ ...freelancer, phone: e.target.value })
           }
-        ></input>
-        <h5>Address</h5>
+        /></div>
+        <h5 className="info-info">Address</h5>
+        <div className="color">
         <input
-          className="input"
+          className="info-input"
           type="text"
           placeholder="address"
           value={freelancer.address}
           onChange={(e) =>
             setFreelancer({ ...freelancer, address: e.target.value })
           }
-        ></input>
-        <h5>Website</h5>
+        /></div>
+        <h5  className="info-info">Website</h5>
+        <div className="color">
         <input
-          className="input"
+          className="info-input"
           type="text"
           placeholder="website"
           value={freelancer.website}
           onChange={(e) =>
             setFreelancer({ ...freelancer, website: e.target.value })
           }
-        ></input>
+        /></div>
 
-        {/* maybe use icon too only or both icon and text */}
+        
         <div>
-          {/* Social Media */}
-          <h3>Social Media</h3>
-          {/* facebook icon*/}
-          <AiOutlineFacebook />
+          
+          <h3 className="info-info2">Social Media</h3>
+          
+          <h5  className="info-info">facebook</h5>
+          <div className="color">
           <input
-            className="input"
+            className="info-input"
             type="text"
             placeholder="facebook"
             value={freelancer.facebook}
             onChange={(e) =>
               setFreelancer({ ...freelancer, facebook: e.target.value })
             }
-          ></input>
-          {/* twitter icon */}
-          <AiOutlineTwitter />
+          /></div>
+          
+          <h5  className="info-info">twitter</h5>
+          <div className="color">
           <input
-            className="input"
+            className="info-input"
             type="text"
             placeholder="twitter"
             value={freelancer.twitter}
             onChange={(e) =>
               setFreelancer({ ...freelancer, twitter: e.target.value })
             }
-          ></input>
-          {/* linked icon */}
-          <AiOutlineLinkedin />
+          />
+          </div>
+          <h5  className="info-info">linked</h5>
+          <div className="color">
           <input
-            className="input"
+            className="info-input"
             type="text"
             placeholder="linked"
             value={freelancer.linked}
             onChange={(e) =>
               setFreelancer({ ...freelancer, linked: e.target.value })
             }
-          ></input>
-          {/* github icon */}
-          <AiOutlineGithub />
+          /></div>
+          
+          <h5  className="info-info">github</h5>
+          <div className="color">
           <input
-            className="input"
+            className="info-input"
             type="text"
             placeholder="github"
             value={freelancer.github}
             onChange={(e) =>
               setFreelancer({ ...freelancer, github: e.target.value })
             }
-          ></input>
-          {/* instagram icon */}
-          <AiOutlineInstagram />
+          /></div>
+          
+          <h5  className="info-info">instagram</h5>
+          <div className="color">
           <input
-            className="input"
+            className="info-input"
             type="text"
             placeholder="instagram"
             value={freelancer.instagram}
             onChange={(e) =>
               setFreelancer({ ...freelancer, instagram: e.target.value })
             }
-          ></input>
+          />
+          </div>
         </div>
       </div>
-      <div>
-        <button className="btn-review hover" onClick={(e) => update(e)}>
+      <div className="color">
+        <button className="info-btn" onClick={(e) => update(e)}>
           Profile Updated
         </button>
       </div>

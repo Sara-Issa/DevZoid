@@ -1,40 +1,52 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@600&family=Righteous&family=Secular+One&display=swap');
+
+
 * {
-  padding: 0;
+    padding: 0;
   margin: 0;
   background: #333f48;
-  color: #f5f5f1;
+  color: #ebebeb
 }
-/* Home */
-
 /* nav */
 .nav {
-  align-items: center;
-  height: 100px;
   width: 80%;
+  height: auto;
+  align-items: center;
   margin: auto;
+  padding: 50px 0px;
 }
-.nav-flex {
-  display: flex;
-  /* justify-content: space-around; */
+.nav-container {
+  display: flex; 
+  align-items: center;
+   justify-content: space-between;
 }
-.container {
-  display: flex;
-  justify-content: center;
-  margin: auto;
+
+.ul-container {
+  display: flex; 
+   justify-content: right;
+  padding: 0% 0% 0% 50%;
   align-items: center;
 }
 .nav-li {
-  padding: 30px 50px;
+  padding: 0px 40px;
   list-style: none;
-  margin: auto;
 }
-ul {
-  align-items: center;
+
+.menu-li {
+  display: none;
+  justify-content: left;
+  color: #333f48;
 }
+
+
 .logo {
-  /* change the logo font later, use google fonts */
-  padding: 30px 0px;
+  font-family: 'Lora', serif;
+  font-size: 50px;
+  text-align: left;
+  align-items: center;
+  padding: 0px 60px 0px 0px;
+  justify-content: left;
 }
 .highlight {
   color: #e4e83b;
@@ -58,75 +70,28 @@ ul {
   color: #333f48;
   transition-duration: 0.5s;
 }
+.menu-btn {
+  background-color: transparent;
+  border: solid 1px;
+  border-color: #e4e83b;
+  border-radius: 20px;
+  color: #e4e83b;
+  padding: 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14;
+  cursor: pointer;
+}
 
-.nav-img {
-  height: auto;
-  width: 80%;
-}
-.nav-img-offer {
-  height: auto;
-  width: 90%;
-}
-.space {
-  height: 400px;
-  width: 80%;
-  align-items: center;
-  margin: auto;
-}
+
 /* nav */
-/* Home */
-
-/* Register */
-.input {
-  width: 70%;
-  height: 50px;
-  margin: 6px;
-  border-radius: 14px;
-  background-color: #f5f5f1;
-  color: #333f48;
-}
-
-.signup-img {
-  height: auto;
-  width: 80%;
-}
-
-.sign-btn {
-  background-color: #00beb5;
-  border-radius: 14px;
-  color: #333f48;
-  padding: 15px 80px;
-  text-align: center;
-  text-decoration: none;
-  font-size: 14;
-}
-
-.log-btn {
-  background-color: #e4e83b;
-  border-radius: 14px;
-  color: #333f48;
-  padding: 15px 80px;
-  text-align: center;
-  text-decoration: none;
-  font-size: 14;
-}
-
-/* Register */
-
-/* Review */
-.review-star {
-  font-size: 20px;
-}
-
-.star {
-  color: gold !important;
-}
-
-/* Review */
 
 /* footer */
 
-.footer-container {
+
+
+.container {
   max-width: 1170px;
   margin: auto;
 }
@@ -141,8 +106,9 @@ ul {
 }
 
 .footer {
-  width: 100%;
   padding: 10px 0px;
+  width: 100%;
+  color: #f5f5f5;
 }
 
 .footer-col {
@@ -163,7 +129,8 @@ ul {
   content: "";
   position: absolute;
   left: 0;
-  bottom: -10px;  
+  bottom: -10px;
+  background-color: #e4e83b;
   height: 2px;
   box-sizing: border-box;
   width: 50px;
@@ -190,3 +157,61 @@ ul {
 }
 
 /* footer */
+
+/* menu */
+
+.menu {
+  width: 50%;
+  text-align: center;
+  margin: auto;
+  padding: 100px 0px 150px 0px;
+}
+
+.menu-box {
+  text-align: center;
+}
+
+.menu-li {
+  color:#f5f5f5;
+  list-style: none;
+  padding: 20px 0px;
+}
+
+
+
+@media only screen and (max-width: 1000px) { 
+  .nav-li {
+    display: none;
+  }
+  
+  .logo {
+    font-size: 45px;
+    padding: 0px;
+    justify-content: left;
+  }
+
+  .menu-li {
+    display: block;
+  }
+
+  .offer {
+    height: 1200px;
+  }
+
+  .li-offer {
+    margin: auto;
+  }
+
+  .footer-col {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .logo {
+    font-size: 35px;
+    padding: 0px;
+    justify-content: left;
+  }
+}

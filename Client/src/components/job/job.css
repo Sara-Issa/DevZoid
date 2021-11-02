@@ -1,0 +1,146 @@
+.jobList-container {
+    display: flex;
+    align-items: center;
+    width: 90%;
+    background-color: #b2bbad;
+    margin: auto;
+    padding: 20px 0px;
+    margin: 3% 5%;
+    border-radius: 15px;
+}
+
+.jobList-title {
+    background-color: #b2bbad;
+    color: #333f48;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+.jobList-info {
+    background-color: #b2bbad;
+    color: #333f48;
+    font-size: 20px;
+}
+
+.jobList-box {
+    background-color: #b2bbad;
+
+}
+
+/* job post */
+
+.jobPost {
+    width: 90%;
+    text-align: center;
+    margin: auto;
+    padding: 100px 0px 150px 0px;
+  }
+  
+  .jobPost-form {
+    align-items: center;
+    text-align: center;
+  }
+  
+  .jobPost-title {
+    padding: 20px 0px;
+    color: #b2bbad;
+    font-size: 30px;
+  }
+  
+  .jobPost-box {
+    text-align: center;
+  }
+  
+  .jobPost-container {
+  display: flex;
+  width: 100%;
+  }
+  
+  .jobPost-input {
+      width: 70%;
+      height: 50px;
+      margin: 6px;
+      border-radius: 14px;
+      border-width: 0px;
+      background-color: #f5f5f1;
+      color: #333f48;
+    }
+    
+    .jobPost-img {
+      height: auto;
+      width: 76.5%;
+    }
+    
+    .jobPost-btn {
+      background-color: #00beb5;
+      border-radius: 14px;
+      color: #333f48;
+      padding: 15px 80px;
+      text-decoration: none;
+      font-size: 14;
+      margin: auto;
+    }
+    
+  /* job */
+
+  .job {
+    width: 70%;
+    text-align: center;
+    margin: auto;
+    padding: 80px 0px 120px 0px;
+    background-color: #b2bbad;
+    border-radius: 40px;
+  }
+  
+  
+  .job-title {
+    padding: 20px 0px;
+    color: #333f48;
+    font-size: 32px;
+    background-color: #b2bbad;
+  }
+  
+  .job-name {
+    padding: 10px 0px;
+    color: #333f48;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 26px;
+    background-color: #b2bbad;
+  }
+
+  .job-info {
+    color: #333f48de;
+    padding: 10px 50px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #b2bbad;
+    font-size: 20px;
+  }
+
+
+  .job-box {
+    text-align: center;
+    background-color: #b2bbad;
+  }
+  
+
+    .job-btn {
+      background-color: #00beb5;
+      border-radius: 14px;
+      color: #333f48;
+      padding: 15px 80px;
+      text-decoration: none;
+      font-size: 14;
+      margin: auto;
+    }
+
+  
+  
+    @media only screen and (max-width: 700px) {
+  
+      .jobPost-container {
+        display: block;
+        width: 100%;
+        }
+  
+    }
+  

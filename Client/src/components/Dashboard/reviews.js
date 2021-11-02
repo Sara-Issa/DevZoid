@@ -3,18 +3,14 @@ import { MdStar } from "react-icons/md";
 
 function Reviews({ review }) {
   return (
-    <div>
-      {/* review part is different, we need input and button to
-      add the review and also at the same time displaying it in the profile  */}
-      {/* this is the review displaying file */}
-      <h2>Reviews</h2>
-      <img src="./rate.svg" alt="rate"></img>
+    <div  className="review">
+      <h2  className="review-title">Reviews</h2>
       <div>
-        <div>
-          <h4>{review.user.username}</h4>
+        <div  className="review-title">
+          <h4  className="review-title">{review.user.username}</h4>
         </div>
-        <div>
-          <div>
+        <div  className="review-title">
+          <div  className="review-title">
             <MdStar
               className={
                 review.rating >= 1 ? "review-star star" : "review-star"
@@ -41,9 +37,11 @@ function Reviews({ review }) {
               }
             />
           </div>
-          <b>{review.title}</b>
+          <b className="review-title">{review.title}</b>
         </div>
+        <div className="review-title">
         {review.review}
+        </div>
       </div>
       <div className="divider"></div>
     </div>

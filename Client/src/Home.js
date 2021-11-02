@@ -4,6 +4,7 @@ import Freelancers from "./components/Home/freelancers";
 import Job from "./components/Home/jobs"
 import Offer from "./components/Home/offer";
 import Promoting from "./components/Home/promoting";
+import "./App.css";
 
 function Home() {
   return (

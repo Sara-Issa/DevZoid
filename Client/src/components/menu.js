@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 import { Link, useHistory } from "react-router-dom";
 import { toast } from "react-toastify";
 import { AiOutlineUser, AiOutlineMenu } from "react-icons/ai";
@@ -8,9 +8,8 @@ const user = JSON.parse(localStorage.getItem("user"));
 
 
 
-
-function Nav() {
-
+function Menu() {
+    
   const history = useHistory();
   function logout() {
     if (JSON.parse(localStorage.getItem("token") != null)) {
@@ -29,34 +28,25 @@ function Nav() {
       history.push("/dashboard"); 
     }
   }
-  
 
-  return (
-    <div className="nav">
-      <div className="nav-container">
-        <h1 className="logo">
-          Dev<span className="highlight">Zoid</span>
-        </h1>
 
-        <div className="ul">
-          <ul className="ul-container">
+    return (
+        <div>
+            <div className="menu-ul">
+          <ul className="menu-box">
             <Link to="/">
-            <li className="nav-li">Home</li>
+            <li className="menu-li">Home</li>
             </Link>
-            <Link to="jobPost">
-            <li className="nav-li">Post</li>
-            </Link>
-
-            <Link to="/menu">
-            <li className="menu-li">< AiOutlineMenu/></li>
+            <Link to="/jobPost">
+            <li className="menu-li">Post</li>
             </Link>
 
-            <li className="nav-li">
+            <li className="menu-li">
               
            <>
             { user === null ? (
            <Link to="/register">
-            <button className="nav-btn">SignUp</button>
+            <button className="nav-btn">Sign Up</button>
            </Link >
            ) : (
             <button className="nav-btn" onClick={() => logout()}>
@@ -67,7 +57,7 @@ function Nav() {
             </li>
 
 
-            <li className="nav-li">
+            <li className="menu-li">
            <>
             { user === null ? (
            console.log("")
@@ -80,10 +70,8 @@ function Nav() {
             </li>
           </ul>
         </div>
-      </div>
-      
-    </div>
-  );
+        </div>
+    )
 }
 
-export default Nav;
+export default Menu

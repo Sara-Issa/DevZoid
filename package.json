@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "nodemon app.js"
   },
   "author": "",
   "license": "ISC",
@@ -20,7 +20,6 @@
     "nodemon": "^2.0.14",
     "react-dropdown": "^1.9.2"
   },
-  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Sara-Issa/DevZoid.git"

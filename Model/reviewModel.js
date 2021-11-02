@@ -20,7 +20,7 @@ const reviewSchema = mongoose.Schema({
     type: mongoose.Schema.Types.ObjectId,
     ref: "freelancer",
   },
-  // you have to identify how u know the user and who the review is for.
+ 
 });
 
 const reviewModel = mongoose.model("review", reviewSchema);

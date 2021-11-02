@@ -1,4 +1,5 @@
 import React from "react";
+import "./login.css"
 import Axios from "axios";
 import { toast } from "react-toastify";
 import { useState } from "react";
@@ -24,19 +25,22 @@ function Login() {
           history.push("/clientProfile");
         }
       })
-      .catch((e) => toast.error(e.response.data.message));
+      .catch((e) => toast.error(e.message));
   }
   return (
-    <div>
-      <div className="container">
-        <div className="">
+    <div className="login">
+      <div className="login-container">
+        <div className="login-container">
+          <div className="login-box">
           <img src="./login.svg" alt="login" className="signup-img" />
           <Link to="/register">
-          <button className="log-btn">Sign Up</button>
-        </Link>
+           <button className="log-btn">Sign Up</button>
+          </Link>
+          </div>
         </div>
-        <div className="">
-          <h1>Login to Account</h1>
+        <div className="login-container">
+          <div className="login-form">
+          <h1 className="login-title">Login to Account</h1>
           <input
             type="text"
             placeholder="email"
@@ -44,7 +48,7 @@ function Login() {
             onChange={(e) => setUser({ ...user, email: e.target.value })}
           ></input>
           <input
-            type="text"
+            type="password"
             placeholder="password"
             className="input"
             onChange={(e) => setUser({ ...user, password: e.target.value })}
@@ -52,6 +56,7 @@ function Login() {
           <button className="sign-btn" onClick={() => login()}>
             Login
           </button>
+        </div>
         </div>
       </div>
     </div>

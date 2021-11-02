@@ -1,4 +1,5 @@
 import React from "react";
+import "./register.css";
 import { useState } from "react";
 import Axios from "axios";
 import { toast } from "react-toastify";
@@ -27,48 +28,52 @@ function Register() {
   }
 
   return (
-    <div>
-      <div className="container">
-        <div className="">
-          <img src="./signup.svg" alt="signup" className="signup-img" />
-          <Link to="/login">
-          <button className="log-btn">Login</button>
-        </Link>
-        </div>
-        <div className="">
-          <h1>Create Account</h1>
+    <div className="register">
+      <div className="register-container">
+       <div className="register-container">
+         <div className="register-box">
+           <img src="./signup.svg" alt="signup" className="register-img" />
+           <Link to="/login">
+            <button className="register-btn1">Login</button>
+           </Link>
+         </div>
+       </div>
+      <div className="register-container">
+        <div className="register-form">
+          <h1 className="register-title">Create Account</h1>
           <input
             type="text"
             placeholder="username"
-            className="input"
+            className="register-input"
             onChange={(e) => setUser({ ...user, username: e.target.value })}
           ></input>
           <input
             type="text"
             placeholder="email"
-            className="input"
+            className="register-input"
             onChange={(e) => setUser({ ...user, email: e.target.value })}
           ></input>
           <input
             type="password"
             placeholder="password"
-            className="input"
+            className="register-input"
             onChange={(e) => setUser({ ...user, password: e.target.value })}
           ></input>
           <select
             type="text"
             placeholder="role"
-            className="input"
+            className="register-input"
             onChange={(e) => setUser({ ...user, role: e.target.value })}
           >
             <option value="">choose</option>
             <option value="user">user</option>
             <option value="freelancer">freelancer</option>
           </select>
-          <button className="sign-btn" onClick={() => signUp()}>
+          <button className="register-btn2" onClick={() => signUp()}>
             Sign Up
           </button>
         </div>
+      </div>
       </div>
     </div>
   );

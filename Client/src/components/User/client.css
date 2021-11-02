@@ -1,0 +1,160 @@
+/* client profile post */
+
+.clientProfile {
+    width: 70%;
+    text-align: center;
+    margin: auto;
+    padding: 80px 0px 120px 0px;
+    background-color: #b2bbad;
+    border-radius: 40px;
+  }
+  
+  
+  .clientProfile-title {
+    padding: 20px 0px;
+    color: #333f48;
+    font-size: 24px;
+    background-color: #b2bbad;
+  }
+  
+  .clientProfile-input {
+    width: 70%;
+    height: 50px;
+    margin: 6px;
+    border-radius: 14px;
+    border-width: 0px;
+    background-color: #f5f5f1;
+    color: #333f48;
+  }
+
+  .clientProfile-upload {
+    width: 30%;
+    height: 50px;
+    margin: 6px;
+    border-radius: 14px;
+    border-width: 0px;
+    background-color: #f5f5f1;
+    color: #333f48;
+  }
+
+  .clientProfile-box {
+    text-align: center;
+    background-color: #b2bbad;
+  }
+  
+
+    .clientProfile-btn {
+      background-color: #00beb5;
+      border-radius: 14px;
+      color: #333f48;
+      padding: 15px 80px;
+      text-decoration: none;
+      font-size: 14;
+      margin: auto;
+    }
+
+    /* client profile */
+
+    .client {
+        width: 70%;
+        text-align: center;
+        margin: auto;
+        padding: 80px 0px 120px 0px;
+        background-color: #b2bbad;
+        border-radius: 40px;
+      }
+      
+      .client-name {
+        padding: 10px 0px;
+        color: #333f48;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 26px;
+        background-color: #b2bbad;
+      }
+    
+      .client-info {
+        color: #333f48de;
+        padding: 10px 50px;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        background-color: #b2bbad;
+        font-size: 20px;
+      }
+
+      .client-img {
+        height: auto;
+        width: 25%;
+        border-radius: 15px;
+      }
+       
+      .client-box {
+        text-align: center;
+        background-color: #b2bbad;
+      }
+      
+    
+        .client-btn {
+          background-color: #00beb5;
+          border-radius: 14px;
+          color: #333f48;
+          padding: 15px 80px;
+          text-decoration: none;
+          font-size: 14;
+          margin: auto;
+        }
+
+
+/* client profile user */
+
+.clientUser {
+    width: 70%;
+    text-align: center;
+    margin: auto;
+    padding: 80px 0px 120px 0px;
+    background-color: #b2bbad;
+    border-radius: 40px;
+  }
+
+  .clientUser-title {
+    padding: 20px 0px;
+    color: #333f48;
+    font-size: 30px;
+    background-color: #b2bbad;
+  }
+
+  .clientUser-name {
+    padding: 10px 0px;
+    color: #333f48;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 26px;
+    background-color: #b2bbad;
+  }
+
+  .clientUser-info {
+    color: #333f48de;
+    padding: 10px 50px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #b2bbad;
+    font-size: 20px;
+  }
+
+  .clientUser-img {
+    height: auto;
+    width: 25%;
+    border-radius: 15px;
+  }
+   
+  .clientUser-box {
+    text-align: center;
+    background-color: #b2bbad;
+  }
+  
+
+    .clientUser-btn {
+      background-color: #00beb5;
+      border-radius: 14px;
+      color: #333f48;
+      padding: 15px 80px;
+      text-decoration: none;
+      font-size: 14;
+      margin: auto;
+    }

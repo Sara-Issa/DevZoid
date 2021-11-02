@@ -10,12 +10,11 @@ function ProfileList() {
 
   useEffect(() => {
     Axios.get(
-      `http://localhost:8000/api/freelancer?token=${token}`).then((res) => {
+      `http://localhost:8000/api/freelancer`).then((res) => {
         setFreelancer(res.data.freelancers);
       });
   }, []);
 
-  // add a loading thingy  ('v')
   return (
     <div>
       <div>

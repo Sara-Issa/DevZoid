@@ -1,7 +1,7 @@
 import React from 'react'
 import Axios from "axios";
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 
 function ClientProfileUser() {
   const [client, setClient] = useState({});
@@ -19,21 +19,38 @@ function ClientProfileUser() {
     });
   }
   }, [id]);
+
+
+  const handleClick = async () => {
+    try {
+        await Axios.post("http://localhost:8000/api/conversations", {
+        senderId: JSON.parse(localStorage.getItem("user"))._id,
+        receiverId: id,
+      })
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
     return (
     
-     <div>
-      <div>
-        <img></img>
+     <div className="clientUser">
+      <div  className="clientUser-box">
+        <img className="clientUser-img" src={`http://localhost:8000/${client.image}`}  alt="profile-image"></img>
       </div>
-      <div>
-        <h2>{client.name}</h2>
+      <div  className="clientUser-box">
+        <h2  className="clientUser-name">{client.name}</h2>
       </div>
-        <div>
-          <h3>Contact Information</h3>
-          {/* phone icon */} <p>{client.phone}</p>
-          {/* address icon */} <p>{client.address}</p>
+        <div  className="clientUser-box">
+          <h3  className="clientUser-title">Contact Information</h3>
+          {/* phone icon */} <p  className="clientUser-info">{client.phone}</p>
+          {/* address icon */} <p className="clientUser-info">{client.address}</p>
         </div>
-      
+        <div  className="clientUser-box">
+       <Link to="/messenger">
+       <button  className="clientUser-btn"onClick={() => handleClick()}>Send me your proposal</button>
+       </Link>
+      </div>
       
     
     </div>
