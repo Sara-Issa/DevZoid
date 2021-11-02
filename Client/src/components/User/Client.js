@@ -21,7 +21,7 @@ function Client() {
 
   useEffect(() => {
     if (user) {
-      Axios.get(`http://localhost:8000/api/client/${user._id}`).then(
+      Axios.get(`https://devzoid.herokuapp.com/api/client/${user._id}`).then(
         (res) => setClient(res.data.client),
       );
     }
@@ -36,7 +36,7 @@ function Client() {
     }
 
     Axios.put(
-      `http://localhost:8000/api/client/${user._id}?token=${token}`,
+      `https://devzoid.herokuapp.com/api/client/${user._id}?token=${token}`,
       formData
     )
       .then((response) => {

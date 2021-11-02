@@ -15,7 +15,7 @@ function Register() {
   });
 
   function signUp() {
-    Axios.post("http://localhost:8000/api/user/", user)
+    Axios.post("https://devzoid.herokuapp.com/api/user/", user)
       .then((res) => {
         localStorage.setItem("user", JSON.stringify(res.data.user));
         localStorage.setItem("token", JSON.stringify(res.data.token));

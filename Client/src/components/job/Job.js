@@ -12,7 +12,7 @@ function Job() {
   useEffect(() => {
     console.log(id);
     if (id) {
-      Axios.get(`http://localhost:8000/api/job/${id}`).then((res) => {
+      Axios.get(`https://devzoid.herokuapp.com/api/job/${id}`).then((res) => {
         console.log(res.data.job);
         localStorage.setItem("job", JSON.stringify(res.data.job));
         setJob(res.data.job);

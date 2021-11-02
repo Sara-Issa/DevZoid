@@ -11,6 +11,7 @@ app.use(express.json());
 app.use(bodyParser());
 app.use(cors());
 
+
 app.use(express.static("images"));
 
 const userRouter = require("./Router/userRouter");
@@ -32,6 +33,15 @@ app.use("/api/client", clientRouter);
 app.use("/api/review", reviewRouter);
 app.use("/api/job", jobRouter);
 app.use("/api/payment", paymentRouter);
+
+
+
+app.use(express.static("client/build"));
+app.use("*", (req, res) => {
+  res.send(path.resolve(__dirname, "client", "socket", "build", "index.html"));
+});
+
+
 
 app.listen(process.env.port, () => {
   console.log("listening on port");

@@ -19,7 +19,7 @@ function JobPost() {
   });
 
   function signUp() {
-    Axios.post("http://localhost:8000/api/job/", job )
+    Axios.post("https://devzoid.herokuapp.com/api/job/", job )
       .then(() => {
         toast.success("Job Posted");
         history.push("/jobList");

@@ -10,7 +10,7 @@ function ProfileList() {
 
   useEffect(() => {
     Axios.get(
-      `http://localhost:8000/api/freelancer`).then((res) => {
+      `https://devzoid.herokuapp.com/api/freelancer`).then((res) => {
         setFreelancer(res.data.freelancers);
       });
   }, []);

@@ -10,7 +10,7 @@ function ClientProfileUser() {
   useEffect(() => {
     console.log(id);
     if (id) {
-    Axios.get(`http://localhost:8000/api/client/${id}`).then((res) => {
+    Axios.get(`https://devzoid.herokuapp.com/api/client/${id}`).then((res) => {
       console.log(res.data.client);
       localStorage.setItem("client", JSON.stringify(res.data.client));  
       setClient(res.data.client);
@@ -23,7 +23,7 @@ function ClientProfileUser() {
 
   const handleClick = async () => {
     try {
-        await Axios.post("http://localhost:8000/api/conversations", {
+        await Axios.post("https://devzoid.herokuapp.com/api/conversations", {
         senderId: JSON.parse(localStorage.getItem("user"))._id,
         receiverId: id,
       })
@@ -36,7 +36,7 @@ function ClientProfileUser() {
     
      <div className="clientUser">
       <div  className="clientUser-box">
-        <img className="clientUser-img" src={`http://localhost:8000/${client.image}`}  alt="profile-image"></img>
+        <img className="clientUser-img" src={`https://devzoid.herokuapp.com/${client.image}`}  alt="profile-image"></img>
       </div>
       <div  className="clientUser-box">
         <h2  className="clientUser-name">{client.name}</h2>

@@ -22,7 +22,7 @@ function Freelancer() {
 
   useEffect(() => {
     if (id) {
-    Axios.get(`http://localhost:8000/api/freelancer/${id}`).then((res) => {
+    Axios.get(`https://devzoid.herokuapp.com/api/freelancer/${id}`).then((res) => {
       console.log(res.data.freelancer);
       localStorage.setItem("freelancer", JSON.stringify(res.data.freelancer));  
       setFreelancer(res.data.freelancer);
@@ -34,7 +34,7 @@ function Freelancer() {
   
   useEffect(() => {
     if (id) {
-    Axios.get(`http://localhost:8000/api/review/${id}`)
+    Axios.get(`https://devzoid.herokuapp.com/api/review/${id}`)
     .then((res) => { console.log(res.data);
        setReviews(res.data.reviews)})
   }}, [id]);
@@ -43,7 +43,7 @@ function Freelancer() {
   // test code
   const handleClick = async () => {
     try {
-        await Axios.post("http://localhost:8000/api/conversations", {
+        await Axios.post("https://devzoid.herokuapp.com/api/conversations", {
         senderId: JSON.parse(localStorage.getItem("user"))._id,
         receiverId: id,
       })
@@ -57,7 +57,7 @@ function Freelancer() {
     <><div className="profile2">
        <div className="profile2-container">
          <div className="profile2-box">
-          <img src={`http://localhost:8000/${freelancer.image}`} alt="profile-image"  className="profile2-img"></img>
+          <img src={`https://devzoid.herokuapp.com/${freelancer.image}`} alt="profile-image"  className="profile2-img"></img>
          </div>
          <div className="profile2-box">
           <h2 className="profile2-name">{freelancer.name}</h2>

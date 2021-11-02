@@ -9,7 +9,7 @@ function JobList() {
   const [job, setJob] = useState([]);
 
   useEffect(() => {
-    Axios.get(`http://localhost:8000/api/job?token=${token}`).then((res) => {
+    Axios.get(`https://devzoid.herokuapp.com/api/job?token=${token}`).then((res) => {
       setJob(res.data.jobs);
     });
   }, []);

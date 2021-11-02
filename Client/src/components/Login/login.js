@@ -13,7 +13,7 @@ function Login() {
   });
 
   function login() {
-    Axios.post("http://localhost:8000/api/user/login", user)
+    Axios.post("https://devzoid.herokuapp.com/api/user/login", user)
       .then((res) => {
         console.log(res.data.user);
         localStorage.setItem("user", JSON.stringify(res.data.user));

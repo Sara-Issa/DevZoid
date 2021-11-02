@@ -13,7 +13,7 @@ function ReviewForm() {
 
   function saveReview() {
     console.log("review");
-    Axios.post("http://localhost:8000/api/review", {
+    Axios.post("https://devzoid.herokuapp.com/api/review", {
       title,
       rating,
       review,

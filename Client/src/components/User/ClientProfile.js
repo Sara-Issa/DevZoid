@@ -11,7 +11,7 @@ function ClientProfile() {
 
   useEffect(() => {
     if (user) {
-    Axios.get(`http://localhost:8000/api/client/${user._id}`).then((res) => {
+    Axios.get(`https://devzoid.herokuapp.com/api/client/${user._id}`).then((res) => {
       console.log(res.data.client);
       localStorage.setItem("client", JSON.stringify(res.data.client));  
       setClient(res.data.client);
@@ -27,7 +27,7 @@ function ClientProfile() {
     <>
     <div className="client">
       <div className="client-box">
-        <img className="client-img" src={`http://localhost:8000/${client.image}`}  alt="profile-image" ></img>
+        <img className="client-img" src={`https://devzoid.herokuapp.com/${client.image}`}  alt="profile-image" ></img>
       </div>
       <div className="client-box">
         <h2 className="client-name">{client.name}</h2>

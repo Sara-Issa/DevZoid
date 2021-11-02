@@ -13,7 +13,7 @@ useEffect(() => {
    const friendId = conversations.members.find((m) => m !== currentUser._id);
    const getUser = async () => {
      try {
-     const res= await Axios("http://localhost:8000/api/user?userId=" + friendId);
+     const res= await Axios("https://devzoid.herokuapp.com/api/user?userId=" + friendId);
      setUser(res.data.user)
    } catch(err){
      console.log(err);

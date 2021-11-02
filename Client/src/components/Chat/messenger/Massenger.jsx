@@ -69,7 +69,7 @@ useEffect(() => {
 
   if (user) {
     try {
-    const res = await Axios.get(`http://localhost:8000/api/conversations/${user._id}`, { 
+    const res = await Axios.get(`https://devzoid.herokuapp.com/api/conversations/${user._id}`, { 
       userId: JSON.parse(localStorage.getItem("user"))._id,
     });
      setConversations(res.data);
@@ -85,7 +85,7 @@ useEffect(() => {
 useEffect(() => {
   const getMessages = async () => {
     try {
-    const res = await Axios.get("http://localhost:8000/api/messages/" + currentChat?._id);
+    const res = await Axios.get("https://devzoid.herokuapp.com/api/messages/" + currentChat?._id);
     setMessages(res.data);
     } catch (err) {
          console.log(err);
@@ -113,7 +113,7 @@ const handleSubmit = async (e) => {
   });
 
   try {
-    const res = await Axios.post("http://localhost:8000/api/messages/", message);
+    const res = await Axios.post("https://devzoid.herokuapp.com/api/messages/", message);
     setMessages([...messages, res.data])
     setNewMessage("")
   } catch (err) {

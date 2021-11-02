@@ -35,7 +35,7 @@ function Info() {
     setUser(JSON.parse(localStorage.getItem("user")));
     console.log(user);
     if (user) {
-      Axios.get(`http://localhost:8000/api/freelancer/${user._id}`).then(
+      Axios.get(`https://devzoid.herokuapp.com/api/freelancer/${user._id}`).then(
         (res) => setFreelancer(res.data.freelancer)
       );
     }
@@ -49,7 +49,7 @@ function Info() {
     }
 
     Axios.put(
-      `http://localhost:8000/api/freelancer/${user._id}?token=${token}`,
+      `https://devzoid.herokuapp.com/api/freelancer/${user._id}?token=${token}`,
       formData
     )
       .then((response) => {

@@ -6,7 +6,7 @@ function profileCard({ data }) {
   return (
     <div className="profileList-container">
       <div className="profileList-box">
-        <img src={`http://localhost:8000/${data.image}`} alt="image" className="profileList-img"></img>   
+        <img src={`https://devzoid.herokuapp.com/${data.image}`} alt="image" className="profileList-img"></img>   
       </div>
       <div className="profileList-box">
         <div  className="profileList-title">

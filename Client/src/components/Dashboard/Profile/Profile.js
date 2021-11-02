@@ -22,7 +22,7 @@ function Profile() {
 
   useEffect(() => {
     if (user) {
-      Axios.get(`http://localhost:8000/api/freelancer/${user._id}`).then(
+      Axios.get(`https://devzoid.herokuapp.com/api/freelancer/${user._id}`).then(
         (res) => setProfile(res.data.freelancer)
       );
     }
@@ -35,7 +35,7 @@ function Profile() {
     <div className="profile1">
       <div className="profile1-container">
       <div className="profile1-box">
-      <img src={`http://localhost:8000/${profile.image}`}  alt="profile-image" className="profile1-img"/>
+      <img src={`https://devzoid.herokuapp.com/${profile.image}`}  alt="profile-image" className="profile1-img"/>
       </div>
       <div className="profile1-box">
         <h2 className="profile1-name">{profile.name}</h2>
