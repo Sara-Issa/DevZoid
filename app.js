@@ -39,7 +39,7 @@ app.use("/api/payment", paymentRouter);
 
 app.use(express.static("client/build"));
 app.use("*", (req, res) => {
-  res.send(path.resolve(__dirname, "client", "socket", "build", "index.html"));
+  res.send(path.resolve(__dirname, "client", "build", "index.html"));
 });
 
 
