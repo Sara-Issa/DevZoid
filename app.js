@@ -44,6 +44,6 @@ app.use("*", (req, res) => {
 
 
 
-app.listen(process.env.Port, () => {
+app.listen(process.env.PORT, () => {
   console.log("listening on port");
 });
