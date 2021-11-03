@@ -37,9 +37,9 @@ app.use("/api/payment", paymentRouter);
 
 
 
-app.use(express.static("client/build"));
+app.use(express.static("Client/build"));
 app.use("*", (req, res) => {
-  res.send(path.resolve(__dirname, "client", "build", "index.html"));
+  res.send(path.resolve(__dirname, "Client", "build", "index.html"));
 });
 
 
