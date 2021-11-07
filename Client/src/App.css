@@ -76,7 +76,7 @@
   border-color: #e4e83b;
   border-radius: 20px;
   color: #e4e83b;
-  padding: 15px;
+  padding: 10px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -206,12 +206,10 @@
     width: 100%;
     margin-bottom: 30px;
   }
-}
 
-@media only screen and (max-width: 500px) {
-  .logo {
-    font-size: 35px;
-    padding: 0px;
-    justify-content: left;
+  i {
+    padding: 0px 8px 0px 0px;
   }
 }
+
+ 

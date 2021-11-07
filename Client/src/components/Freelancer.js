@@ -103,8 +103,6 @@ function Freelancer() {
         <div className="profile2-box">
           <h3 className="profile2-title"> Review</h3>
           <ReviewForm />
-        </div>
-        <div>
           {reviews.map((review) => (
           <Review review={review} />
           ))}

@@ -18,7 +18,7 @@ function ProfileList() {
   return (
     <div>
       <div>
-      {freelancer && freelancer.length === 0 && <p>Loooooding...</p>}
+      {freelancer && freelancer.length === 0 && <p className="looding">Loooooding...</p>}
       {freelancer && freelancer.length > 0 &&
         freelancer.map((freelancer) =>
           <ProfileCard key={freelancer._id} data={freelancer} />

@@ -28,6 +28,13 @@
 }
 
 /* job post */
+.looding {
+margin: auto;
+font-size: 32px;
+font-family: monospace;
+text-align: center;
+padding: 100px 0px;
+}
 
 .jobPost {
     width: 90%;

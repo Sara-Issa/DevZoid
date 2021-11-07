@@ -34,7 +34,7 @@ function Job() {
         <h3  className="job-title">Job description</h3>
         <p  className="job-info">{job.description}</p>
         <h3  className="job-title">Price</h3>
-        <h5  className="job-info">${job.price}</h5>
+        <h5  className="job-info">{job.price}</h5>
       </div>
     </div>
   );

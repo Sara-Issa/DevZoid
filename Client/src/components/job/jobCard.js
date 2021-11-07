@@ -13,7 +13,7 @@ function jobCard({ data }) {
             </Link>
           </h3>
           <span className="jobList-info">{data.title}</span>
-          <span className="jobList-info">${data.price}</span>
+          <span className="jobList-info">{data.price}</span>
         </div>
       </div>
     </div>

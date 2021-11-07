@@ -53,6 +53,18 @@ function Nav() {
 
             <li className="nav-li">
               
+              <>
+               { user === null ? (
+              console.log("")
+              ) : (
+               <Link to="/messenger">
+               <p className="">Chat</p>
+               </Link>
+                 )}
+              </>
+               </li>
+            <li className="nav-li">
+              
            <>
             { user === null ? (
            <Link to="/register">
@@ -72,6 +84,7 @@ function Nav() {
             { user === null ? (
            console.log("")
             ) : (
+            
             <button className="menu-btn" >
                 < AiOutlineUser onClick={() => goto()} />
               </button>

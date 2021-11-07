@@ -17,7 +17,7 @@ function JobList() {
   return (
     <div>
       <div>
-        {job && job.length === 0 && <p>Loooooding...</p>}
+        {job && job.length === 0 && <p className="looding">Loooooding...</p>}
         {job &&
           job.length > 0 &&
           job.map((job) => <JobCard key={job._id} data={job} />)}

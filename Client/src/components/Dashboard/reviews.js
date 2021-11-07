@@ -4,7 +4,6 @@ import { MdStar } from "react-icons/md";
 function Reviews({ review }) {
   return (
     <div  className="review">
-      <h2  className="review-title">Reviews</h2>
       <div>
         <div  className="review-title">
           <h4  className="review-title">{review.user.username}</h4>
