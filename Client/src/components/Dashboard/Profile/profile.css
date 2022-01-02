@@ -5,7 +5,7 @@
     display: flex;
     align-items: center;
     width: 90%;
-    background-color: #b2bbad;
+    background-color: #edf5e1;
     margin: auto;
     padding: 20px 0px;
     margin: 3% 5%;
@@ -18,30 +18,32 @@
     width: 100px;
     padding: 0px 10px;
     border-radius: 50%;
-    background-color: #b2bbad;
+    background-color: #edf5e1;
 }
 
 .profileList-title {
-    background-color: #b2bbad;
+    background-color: #edf5e1;
     color: #333f48;
     text-decoration: none;
     font-size: 24px;
 }
 
 .profileList-info {
-    background-color: #b2bbad;
+    background-color: #edf5e1;
     color: #333f48;
     font-size: 20px;
 }
 
 .profileList-box {
-    background-color: #b2bbad;
+    background-color: #edf5e1;
 
 }
 
 
 /* profile */
-
+.all {
+    padding: 70px 0px;
+}
 .profile1 {
     padding: 100px 0px 200px 30px;
     width: 80%;
@@ -49,7 +51,7 @@
     position: relative;
     margin: auto;
     text-align: left;
-    background-color: #b2bbad;
+    background-color: #edf5e1;
     border-radius: 50px;
 }
 
@@ -57,29 +59,29 @@
     display: flex;
     justify-content: space-around;
     width: 100%;
-    background-color: #b2bbad;
+    background-color: #edf5e1;
 }
 
 .profile1-box {
     padding: 50px 0px;
     width: 100%;
-    background-color: #b2bbad;
+    background-color: #edf5e1;
 }
 
 .profile1-name {
     padding: 20px 0px;
-    color: #f5f5f5;
+    color: #ffffff;
     font-size: 30px;
-    background-color: #b2bbad;
+    background-color: #edf5e1;
     color: #333f48;
     
 }
 
 .profile1-title {
     padding: 10px 0px;
-    color: #f5f5f5;
+    color: #ffffff;
     font-size: 24px;
-    background-color: #b2bbad;
+    background-color: #edf5e1;
     color: #333f48;
 }
 
@@ -87,7 +89,7 @@
     padding: 20px 0px 20px 0px;
     font-size: 18px;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    background-color: #b2bbad;
+    background-color: #edf5e1;
     color: #333f48;
 }
 
@@ -95,11 +97,14 @@
     width: 70%;
     height: auto;
     border-radius: 15px;
-    background-color: #b2bbad;
+    background-color: #edf5e1;
 }
 
 
 /* freelancer */
+.all {
+    padding: 70px 0px;
+}
 
 .profile2 {
     padding: 50px 0px 150px 30px;
@@ -108,7 +113,7 @@
     position: relative;
     margin: auto;
     text-align: left;
-    background-color: #b2bbad;
+    background-color: #edf5e1;
     border-radius: 50px;
 }
 
@@ -116,29 +121,29 @@
     display: flex;
     justify-content: space-around;
     width: 100%;
-    background-color: #b2bbad;
+    background-color: #edf5e1;
 }
 
 .profile2-box {
     padding: 50px 0px;
     width: 100%;
-    background-color: #b2bbad;
+    background-color: #edf5e1;
 }
 
 .profile2-name {
     padding: 20px 0px;
-    color: #f5f5f5;
+    color: #ffffff;
     font-size: 30px;
-    background-color: #b2bbad;
+    background-color: #edf5e1;
     color: #333f48;
     
 }
 
 .profile2-title {
     padding: 10px 0px;
-    color: #f5f5f5;
+    color: #ffffff;
     font-size: 24px;
-    background-color: #b2bbad;
+    background-color: #edf5e1;
     color: #333f48;
 }
 
@@ -146,7 +151,7 @@
     padding: 20px 0px 20px 0px;
     font-size: 18px;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    background-color: #b2bbad;
+    background-color: #edf5e1;
     color: #333f48;
 }
 
@@ -154,13 +159,13 @@
     width: 70%;
     height: auto;
     border-radius: 15px;
-    background-color: #b2bbad;
+    background-color: #edf5e1;
 }
 
 
 .profile2-btn {
     margin: 20px 0px 0px 0px;
-    background-color: #b2bbad;
+    background-color: #edf5e1;
     border: solid 1px;
     border-color: #333f48;
     border-radius: 8px;
@@ -176,11 +181,15 @@
   .profile2-btn:hover {
     background-color: #00beb5;
     border: none;
-    color: #f5f5f5;
+    color: #ffffff;
     transition-duration: 0.5s;
   }
 
   /* info */
+
+  .cover {
+    padding: 100px 0px;
+}
 
   .info {
     padding: 50px 0px 150px 0px;
@@ -189,23 +198,23 @@
     position: relative;
     margin: auto;
     text-align: center;
-    background-color: #b2bbad;
+    background-color: #edf5e1;
     border-radius: 50px;
   }
 
   .info-info {
     padding: 10px 0px;
-    color: #f5f5f5;
+    color: #ffffff;
     font-size: 24px;
-    background-color: #b2bbad;
+    background-color: #edf5e1;
     color: #333f48;
   }
 
   .info-info2 {
     padding: 10px 0px;
-    color: #f5f5f5;
+    color: #ffffff;
     font-size: 30px;
-    background-color: #b2bbad;
+    background-color: #edf5e1;
     color: #333f48;
 }
 
@@ -213,19 +222,19 @@
     
     justify-content: center;
     width: 100%;
-    background-color: #b2bbad;
+    background-color: #edf5e1;
 }
 
 .info-box {
     padding: 50px 0px;
     width: 100%;
-    background-color: #b2bbad;
+    background-color: #edf5e1;
 }
 
 
 .info-btn {
     margin: 20px 0px 0px 0px;
-    background-color: #b2bbad;
+    background-color: #edf5e1;
     border: solid 1px;
     border-color: #333f48;
     border-radius: 8px;
@@ -241,7 +250,7 @@
   .info-btn:hover {
     background-color: #333f48;
     border: none;
-    color: #f5f5f5;
+    color: #ffffff;
     transition-duration: 0.5s;
   }
 
@@ -251,12 +260,12 @@
     margin: 6px;
     border-radius: 14px;
     border-width: 0px;
-    background-color: #f5f5f5;
+    background-color: #ffffff;
     color: #333f48;
     }
 
     .color {
-        background-color: #b2bbad;
+        background-color: #edf5e1;
     }
 
     .info-upload {
@@ -265,7 +274,7 @@
         margin: 6px;
         border-radius: 14px;
         border-width: 0px;
-        background-color: #f5f5f1;
+        background-color: #ffffff;
         color: #333f48;
         }
 

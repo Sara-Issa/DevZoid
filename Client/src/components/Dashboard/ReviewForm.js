@@ -60,6 +60,7 @@ function ReviewForm() {
         <textarea
           placeholder="Review"
           rows="4" className="review-title"
+          className="input"
           onChange={(e) => setReview(e.target.value)}
         />
         <div  className="review-title">

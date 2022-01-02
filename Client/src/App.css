@@ -1,12 +1,11 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css");
 @import url('https://fonts.googleapis.com/css2?family=Lora:wght@600&family=Righteous&family=Secular+One&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@600&family=Montagu+Slab:wght@100;300&family=Righteous&family=Secular+One&family=Titillium+Web:wght@200&display=swap');
 
 * {
-    padding: 0;
+  padding: 0;
   margin: 0;
-  background: #333f48;
-  color: #ebebeb
+  font-family: 'Montagu Slab', serif;
 }
 /* nav */
 .nav {
@@ -15,48 +14,61 @@
   align-items: center;
   margin: auto;
   padding: 50px 0px;
+  text-decoration: none;
 }
 .nav-container {
   display: flex; 
   align-items: center;
    justify-content: space-between;
+   text-decoration: none;
+}
+
+ul {
+  text-decoration: none;
 }
 
 .ul-container {
   display: flex; 
    justify-content: right;
-  padding: 0% 0% 0% 50%;
   align-items: center;
+  text-decoration: none;
+  
 }
 .nav-li {
   padding: 0px 40px;
   list-style: none;
+  color: #5cdb95;
+  font-size: 20px;
 }
 
 .menu-li {
   display: none;
   justify-content: left;
-  color: #333f48;
+  color: #5cdb95;
+  list-style: none;
+  padding: 0px 40px;
 }
 
 
 .logo {
-  font-family: 'Lora', serif;
+  font-family: 'Montagu Slab', serif;
+font-weight: 100;
   font-size: 50px;
   text-align: left;
   align-items: center;
   padding: 0px 60px 0px 0px;
+  color: #05386b;
   justify-content: left;
 }
 .highlight {
-  color: #e4e83b;
+  color: #5cdb95;
 }
 .nav-btn {
   background-color: transparent;
   border: solid 1px;
-  border-color: #e4e83b;
+  border-color: #5cdb95;
   border-radius: 8px;
-  color: #e4e83b;
+  color: #5cdb95;
   padding: 14px 32px;
   text-align: center;
   text-decoration: none;
@@ -66,16 +78,16 @@
   transition-duration: 0.5s;
 }
 .nav-btn:hover {
-  background-color: #e4e83b;
-  color: #333f48;
+  background-color: #5cdb95;
+  color: #f5f5f5;
   transition-duration: 0.5s;
 }
 .menu-btn {
   background-color: transparent;
   border: solid 1px;
-  border-color: #e4e83b;
+  border-color: #5cdb95;
   border-radius: 20px;
-  color: #e4e83b;
+  color: #5cdb95;
   padding: 10px;
   text-align: center;
   text-decoration: none;
@@ -106,9 +118,12 @@
 }
 
 .footer {
-  padding: 10px 0px;
+  padding: 50px 0px;
   width: 100%;
-  color: #f5f5f5;
+  color: #05386b;
+  background-color: #5cdb95;
+  border-top-right-radius: 50px;
+
 }
 
 .footer-col {
@@ -118,10 +133,12 @@
 }
 
 .footer-col h4 {
+  font-family: 'Montagu Slab', serif;
+  font-weight: 400;
   font-size: 18px;
-  color: #f5f5f5;
+  color: #ffffff;
   margin-bottom: 35px;
-  font-weight: 500;
+  
   position: relative;
 }
 
@@ -130,7 +147,7 @@
   position: absolute;
   left: 0;
   bottom: -10px;
-  background-color: #e4e83b;
+  background-color: #05386b;
   height: 2px;
   box-sizing: border-box;
   width: 50px;
@@ -172,7 +189,7 @@
 }
 
 .menu-li {
-  color:#f5f5f5;
+  color:#05386b;
   list-style: none;
   padding: 20px 0px;
 }

@@ -2,6 +2,7 @@ import React from 'react'
 import { Link, useHistory } from "react-router-dom";
 import { toast } from "react-toastify";
 import { AiOutlineUser, AiOutlineMenu } from "react-icons/ai";
+import "../App.css";
 
 
 const user = JSON.parse(localStorage.getItem("user"));
@@ -34,10 +35,10 @@ function Menu() {
         <div>
             <div className="menu-ul">
           <ul className="menu-box">
-            <Link to="/">
+            <Link to="/"  style={{ textDecoration: 'none' }}>
             <li className="menu-li">Home</li>
             </Link>
-            <Link to="/jobPost">
+            <Link to="/jobPost"  style={{ textDecoration: 'none' }}>
             <li className="menu-li">Post</li>
             </Link>
 
@@ -45,7 +46,7 @@ function Menu() {
               
            <>
             { user === null ? (
-           <Link to="/register">
+           <Link to="/register"  style={{ textDecoration: 'none' }}>
             <button className="nav-btn">Sign Up</button>
            </Link >
            ) : (

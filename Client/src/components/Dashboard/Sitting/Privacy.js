@@ -2,7 +2,7 @@ import React from "react";
 import "./sitting.css";
 function Privacy() {
   return (
-    
+    <div className="privacy">
     <div className="privacy-container">
 
       <h1 className="privacy-title" >Privacy & Policy</h1>
@@ -50,6 +50,7 @@ function Privacy() {
         further messages.
       </p>
       </div>
+    </div>
     </div>
   );
 }

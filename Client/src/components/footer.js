@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react'
 import { Link } from 'react-router-dom'
+import "../App.css";
 
 function footer() {
   return (
@@ -30,19 +31,17 @@ function footer() {
           <div className="footer-col">
             <h4>User Guidelines</h4>
             <ul className="ul-main">
-              {/* <BrowserRouter> */}
-              <Link to="/privacy">
+              <Link to="/privacy"  style={{ textDecoration: 'none' }}>
               <li className="li-main"><a href="">Privacy</a></li>
               </Link>
-              <Link to="/terms">
+              <Link to="/terms"  style={{ textDecoration: 'none' }}>
               <li className="li-main">
                 <a href="">Terms & Conditions</a>
               </li>
               </Link>
-              <Link to="/about">
+              <Link to="/about"  style={{ textDecoration: 'none' }}>
               <li className="li-main"><a href="">About</a></li>
               </Link>
-              {/* </BrowserRouter> */}
             </ul>
           </div>
           <div className="footer-col">

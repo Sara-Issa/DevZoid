@@ -2,6 +2,7 @@ import React from "react";
 import { Link, useHistory } from "react-router-dom";
 import { toast } from "react-toastify";
 import { AiOutlineUser, AiOutlineMenu } from "react-icons/ai";
+import "../App.css";
 
 
 const user = JSON.parse(localStorage.getItem("user"));
@@ -29,6 +30,8 @@ function Nav() {
       history.push("/dashboard"); 
     }
   }
+
+ 
   
 
   return (
@@ -39,12 +42,12 @@ function Nav() {
         </h1>
 
         <div className="ul">
-          <ul className="ul-container">
-            <Link to="/">
-            <li className="nav-li">Home</li>
+          <ul className="ul-container" style={{ textDecoration: 'none' }} >
+            <Link to="/" style={{ textDecoration: 'none' }} >
+            <li className="nav-li"  style={{ textDecoration: 'none' }} >Home</li>
             </Link>
-            <Link to="jobPost">
-            <li className="nav-li">Post</li>
+            <Link to="jobPost" style={{ textDecoration: 'none' }}>
+            <li className="nav-li"  style={{ textDecoration: 'none' }} >Post</li>
             </Link>
 
             <Link to="/menu">
@@ -55,10 +58,11 @@ function Nav() {
               
               <>
                { user === null ? (
-              console.log("")
+                 console.log("")
+              // null
               ) : (
-               <Link to="/messenger">
-               <p className="">Chat</p>
+               <Link to="/messenger" style={{ textDecoration: 'none' }}>
+               <p className="nav-li"  style={{ textDecoration: 'none' }} >Chat</p>
                </Link>
                  )}
               </>

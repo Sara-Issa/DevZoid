@@ -2,6 +2,7 @@ import React from "react";
 
 function Terms() {
   return (
+    <div className="term">
     <div className="term-container">
       <h1 className="term-title">Terms & Conditions</h1>
       <img src="./terms.svg" alt="terms" className="term-img" ></img>
@@ -158,6 +159,7 @@ function Terms() {
         accordance with the law of and you hereby submit to the exclusive
         jurisdiction of the courts.
       </p>
+    </div>
     </div>
   );
 }

@@ -30,8 +30,8 @@ width: 100%;
     margin: 6px;
     border-radius: 14px;
     border-width: 0px;
-    background-color: #f5f5f1;
-    color: #333f48;
+    background-color: #edf5e1;
+    color: #05386b;
   }
   
   .register-img {
@@ -40,23 +40,25 @@ width: 100%;
   }
   
   .register-btn2 {
-    background-color: #00beb5;
+    background-color: #05386b;
     border-radius: 14px;
-    color: #333f48;
+    color: #ffffff;
     padding: 15px 80px;
     text-decoration: none;
     font-size: 14;
     margin: auto;
+    border: none;
   }
   
   .register-btn1 {
-    background-color: #e4e83b;
+    background-color: #5cdb95;
     border-radius: 14px;
-    color: #333f48;
+    color: #ffffff;
     padding: 15px 80px;
     text-align: center;
     text-decoration: none;
     font-size: 14;
+    border: none;
   }
 
 

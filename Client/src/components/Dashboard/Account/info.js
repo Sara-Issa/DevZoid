@@ -59,6 +59,7 @@ function Info() {
       .catch((e) => toast.error(e.message));
   }
   return (
+    <div className="cover">
     <div className="info">
       <div className="info-box">
         <Nav />
@@ -262,6 +263,7 @@ function Info() {
           Profile Updated
         </button>
       </div>
+    </div>
     </div>
   );
 }

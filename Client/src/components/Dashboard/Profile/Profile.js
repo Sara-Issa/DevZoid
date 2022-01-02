@@ -2,7 +2,7 @@ import React from "react";
 import Axios from "axios";
 import "../dashboard.css"
 import Nav from "../Nav";
-import Reviews from "../reviews"
+import Review from "../reviews";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import {
@@ -16,9 +16,16 @@ import {
 const user = JSON.parse(localStorage.getItem("user"))
 
 function Profile() {
-  // const { id } = useParams();
+  const [reviews, setReviews] = useState([]);
   const [profile, setProfile] = useState({});
  
+
+  useEffect(() => {
+    if (user) {
+    Axios.get(`https://devzoid.herokuapp.com/api/review/${user._id}`)
+    .then((res) => { console.log(res.data);
+       setReviews(res.data.reviews)})
+  }}, [user]);
 
   useEffect(() => {
     if (user) {
@@ -28,7 +35,7 @@ function Profile() {
     }
   }, [user]);
   return (
-    <>
+    <div className="all">
     <div className="nav-box">
         <Nav />
       </div>
@@ -74,11 +81,13 @@ function Profile() {
       <div className="profile1-container">
       <div className="profile1-box">
         <h3 className="profile1-title"> Review</h3>
-        {/* <Reviews /> */}
+        {reviews.map((review) => (
+          <Review review={review} />
+          ))}
       </div>
     </div>
     </div>
-    </>
+    </div>
   );
 }
 

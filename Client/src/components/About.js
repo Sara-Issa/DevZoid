@@ -3,6 +3,7 @@ import "./Dashboard/Sitting/sitting.css";
 
 function About() {
   return (
+    <div className="about-main">
     <div className="about">
       <div className="about-container">
         <div className="info-container">
@@ -38,6 +39,7 @@ function About() {
         </p>
         </div>
       </div>
+    </div>
     </div>
   );
 }

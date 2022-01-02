@@ -1,7 +1,10 @@
 /* privacy */
+.privacy {
+    margin: 0px 0px 100px 0px;
+}
 
 .privacy-container {
-    background-color: #b2bbad;
+    background-color: #edf5e1;
     border-radius: 40px;
     width: 90%;
     position: relative;
@@ -13,27 +16,30 @@
 .privacy-img {
     width: 40%;
     height: auto;
-    background-color: #b2bbad;
+    background-color: #edf5e1;
 }
 
 .privacy-title {
     padding: 50px;
     color: #333f48;
-    background-color: #b2bbad;
+    background-color: #edf5e1;
 }
 
 .privacy-info {
     padding: 40px;
-    background-color: #b2bbad;
+    background-color: #edf5e1;
     color: #333f48;
    
 }
 
 
 /* terms */
+.term {
+    margin: 0px 0px 100px 0px;
+}
 
 .term-container {
-    background-color: #b2bbad;
+    background-color: #edf5e1;
     border-radius: 40px;
     width: 90%;
     position: relative;
@@ -45,26 +51,30 @@
 .term-img {
     width: 40%;
     height: auto;
-    background-color: #b2bbad;
+    background-color: #edf5e1;
 }
 
 .term-title {
     padding: 50px;
     color: #333f48;
-    background-color: #b2bbad;
+    background-color: #edf5e1;
 }
 
 .term-info {
     padding: 40px;
-    background-color: #b2bbad;
+    background-color: #edf5e1;
     color: #333f48;
    
 }
 
 
 /* about */
+.about-main {
+    margin: 0px 0px 100px 0px;
+}
+
 .about {
-    background-color: #b2bbad;
+    background-color: #edf5e1;
     border-radius: 40px;
     width: 90%;
     position: relative;
@@ -78,30 +88,30 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
-    background-color: #b2bbad;
+    background-color: #edf5e1;
 }
 
 
 .info-container {
     width: 100%;
-    background-color: #b2bbad;
+    background-color: #edf5e1;
 }
 
 .about-img {
     width: 85%;
     height: 85%;
-    background-color: #b2bbad;
+    background-color: #edf5e1;
 }
 
 .about-title {
     padding: 50px;
     color: #333f48;
-    background-color: #b2bbad;
+    background-color: #edf5e1;
 }
 
 .about-info {
     padding: 40px;
-    background-color: #b2bbad;
+    background-color: #edf5e1;
     color: #333f48;
 }
 

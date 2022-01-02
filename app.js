@@ -19,7 +19,6 @@ const userRouter = require("./Router/userRouter");
 const freelancerRouter = require("./Router/freelancerRouter");
 const reviewRouter = require("./Router/reviewRouter");
 const jobRouter = require("./Router/jobRouter");
-const paymentRouter = require("./Router/paymentRouter");
 const clientRouter = require("./Router/clientRouter");
 const conversationRouter = require("./Router/conversationRouter");
 const messageRouter = require("./Router/messageRouter");
@@ -33,7 +32,7 @@ app.use("/api/freelancer", freelancerRouter);
 app.use("/api/client", clientRouter);
 app.use("/api/review", reviewRouter);
 app.use("/api/job", jobRouter);
-app.use("/api/payment", paymentRouter);
+
 
 
 

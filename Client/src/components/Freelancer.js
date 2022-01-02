@@ -12,13 +12,13 @@ import {
   AiOutlineFacebook,
 } from "react-icons/ai";
 
-const token = JSON.parse(localStorage.getItem("token"));
+
 
 
 function Freelancer() {
   const [reviews, setReviews] = useState([]);
   const [freelancer, setFreelancer] = useState({});
-  const { id, user } = useParams();
+  const { id } = useParams();
 
   useEffect(() => {
     if (id) {
@@ -54,7 +54,8 @@ function Freelancer() {
   
   return (
     
-    <><div className="profile2">
+    <div className="all">
+    <div className="profile2">
        <div className="profile2-container">
          <div className="profile2-box">
           <img src={`https://devzoid.herokuapp.com/${freelancer.image}`} alt="profile-image"  className="profile2-img"></img>
@@ -109,7 +110,7 @@ function Freelancer() {
         </div>
       </div>
       </div>
-      </>
+      </div>
     
   );
 }
